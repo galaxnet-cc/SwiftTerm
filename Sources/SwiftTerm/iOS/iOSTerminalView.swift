@@ -1005,7 +1005,7 @@ open class TerminalView: UIScrollView, UITextInputTraits, UIKeyInput, UIScrollVi
         // Once we test the font change, we could disable these two lines, and
         // enable the #if false in drawterminalContents that should be coping with this now
         nativeBackgroundColor.set ()
-        context.fill ([dirtyRect])
+        context.clear(dirtyRect)
 
         // drawTerminalContents and CoreText expect the AppKit coordinate system
         context.scaleBy (x: 1, y: -1)
